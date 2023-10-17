@@ -58,6 +58,7 @@ void free_stack(stack_t **head);
 /* functions in struct*/
 void pall(stack_t **h, unsigned int lc);
 void push_t(stack_t **head, unsigned int counter);
+void pop_t(stack_t **head, unsigned int);
 /* execution funcs */
 int exec(char *content, stack_t **stack, unsigned int count, FILE *f);
 #endif

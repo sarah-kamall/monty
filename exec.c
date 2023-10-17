@@ -4,12 +4,13 @@
  * @content: A string containing the command to execute
  * @stack: A pointer to a pointer to a stack data structure
  * @count: An unsigned integer representing the current execution count
- * @file: A pointer to a file for input/output operations
+ * @f: A pointer to a file for input/output operations
  * Return: 0 upon success
  */
 int exec(char *content, stack_t **stack, unsigned int count, FILE *f)
 {
-	instruction_t instruc[] = {{"push", push_t}, {"pall", pall}, {NULL, NULL}};
+	instruction_t instruc[] = {{"push", push_t}, {"pall", pall}, 
+		{"pop", pop_t}, {NULL, NULL}};
 	unsigned int i;
 	char *cmand;
 

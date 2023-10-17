@@ -10,10 +10,10 @@
 void pall(stack_t **h, unsigned int lc)
 {
 	stack_t *head;
-	
+
 	(void)lc;
 	head = *h;
-	while(head)
+	while (head)
 	{
 		printf("%d\n", head->n);
 		head = head->next;
