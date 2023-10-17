@@ -20,7 +20,7 @@ void push_t(stack_t **head, unsigned int count)
 		}
 		if (fnum == 1)
 		{
-			fprintf(stderr, "L%d: usage: push integer\n%s", count, glob.arg);
+			fprintf(stderr, "L%d: usage: push integer\n", count);
 			fclose(glob.file);
 			free(glob.content);
 			free_stack(head);
