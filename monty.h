@@ -56,6 +56,7 @@ int pop(stack_t **head);
 stack_t *push(stack_t **head, int n);
 void free_stack(stack_t **head);
 /* functions in struct*/
+void pint_t(stack_t **head, unsigned int lc);
 void pall(stack_t **h, unsigned int lc);
 void push_t(stack_t **head, unsigned int counter);
 void pop_t(stack_t **head, unsigned int);
