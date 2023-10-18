@@ -11,7 +11,8 @@ int exec(char *content, stack_t **stack, unsigned int count, FILE *f)
 {
 	instruction_t instruc[] = {{"push", push_t}, {"pall", pall},	 {"pop", pop_t},
 														 {"swap", swap_t}, {"pint", pint_t}, {"add", add},
-														 {NULL, NULL}};
+														 {"nop", nop},		 {"sub", sub},		 {"div", div_i},
+														 {"mul", mul},		 {"mod", mod},		 {NULL, NULL}};
 	unsigned int i;
 	char *cmand;
 

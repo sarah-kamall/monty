@@ -10,11 +10,10 @@
  */
 void add(stack_t **head, unsigned int lc)
 {
-	int size = stack_size(*head);
 	stack_t *stack_head = *head;
 	int sum = 0;
 
-	if (size < 2)
+	if (!stack_head || !stack_head->next)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", lc);
 		free_stack(head);
