@@ -65,6 +65,7 @@ void swap_t(stack_t **head, unsigned int linenum);
 void add(stack_t **head, unsigned int lc);
 void nop(stack_t **h, unsigned int lc);
 void sub(stack_t **h, unsigned int lc);
+void div_i(stack_t **h, unsigned int lc);
 
 /* execution funcs */
 int exec(char *content, stack_t **stack, unsigned int count, FILE *f);
