@@ -1,4 +1,4 @@
-#include"monty.h"
+#include "monty.h"
 info glob = {NULL, NULL, NULL};
 /**
  * main - main func
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	glob.file = f;
+	glob.file = f; /* clang-format off */
 	do {
 		content = NULL;
 		readline = getline(&content, &size, f);
@@ -38,14 +38,8 @@ int main(int argc, char *argv[])
 		if (readline > 0)
 			exec(content, &stack, linecount, f);
 		free(content);
-	} while (readline > 0);
+	} while (readline > 0); /* clang-format on */
 	free_stack(&stack);
 	fclose(f);
 	return (0);
 }
-
-
-
-
-
-

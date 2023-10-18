@@ -1,4 +1,4 @@
-#include"monty.h"
+#include "monty.h"
 /**
  * exec - Execute commands based on 'content' and manipulate the stack
  * @content: A string containing the command to execute
@@ -9,9 +9,9 @@
  */
 int exec(char *content, stack_t **stack, unsigned int count, FILE *f)
 {
-	instruction_t instruc[] = {{"push", push_t}, {"pall", pall}, 
-		{"pop", pop_t}, {"swap", swap_t}, 
-		{"pint", pint_t}, {NULL, NULL}};
+	instruction_t instruc[] = {{"push", push_t}, {"pall", pall},	 {"pop", pop_t},
+														 {"swap", swap_t}, {"pint", pint_t}, {"add", add},
+														 {NULL, NULL}};
 	unsigned int i;
 	char *cmand;
 
@@ -31,7 +31,8 @@ int exec(char *content, stack_t **stack, unsigned int count, FILE *f)
 		i++;
 	}
 	if (cmand && instruc[i].opcode == NULL)
-	{ fprintf(stderr, "L%d: unknown instruction %s\n", count, cmand);
+	{
+		fprintf(stderr, "L%d: unknown instruction %s\n", count, cmand);
 		fclose(f);
 		free_stack(stack);
 		free(content);
