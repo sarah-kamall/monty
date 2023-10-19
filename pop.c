@@ -9,5 +9,8 @@
 void pop_t(stack_t **head, unsigned int lc)
 {
 	(void)lc;
-	pop(head);
+	if (glob.isqueue == 0)
+		pop(head);
+	else
+		popqueue(head);
 }

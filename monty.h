@@ -41,6 +41,7 @@ typedef struct instruction_s
  * @arg: value
  * @file: pointer to monty file
  * @content: line content
+ * @isqueue: check if queue
  * Description: carries values through the program
  */
 typedef struct info_s
@@ -48,6 +49,7 @@ typedef struct info_s
 	char *arg;
 	FILE *file;
 	char *content;
+	int isqueue;
 } info;
 extern info glob;
 /* stack funcs */
@@ -70,8 +72,11 @@ void mul(stack_t **h, unsigned int lc);
 void mod(stack_t **h, unsigned int lc);
 void pstr(stack_t **head, unsigned int lc);
 void pchar(stack_t **h, unsigned int lc);
-
-
+/* queue funcs */
+int popqueue(stack_t **head);
+stack_t *pushqueue(stack_t **head, int n);
+void isqueue(stack_t **head, unsigned int linenum);
+void isstack(stack_t **head, unsigned int lc);
 /* execution funcs */
 int exec(char *content, stack_t **stack, unsigned int count, FILE *f);
 #endif
