@@ -36,6 +36,9 @@ void push_t(stack_t **head, unsigned int count)
 		exit(EXIT_FAILURE);
 	}
 	n = atoi(glob.arg);
-	push(head, n);
+	if (glob.isqueue == 0)
+		push(head, n);
+	else
+		pushqueue(head, n);
 }
 

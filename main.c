@@ -1,5 +1,5 @@
 #include "monty.h"
-info glob = {NULL, NULL, NULL};
+info glob = {NULL, NULL, NULL, 0};
 /**
  * main - main func
  * @argc: num of args
