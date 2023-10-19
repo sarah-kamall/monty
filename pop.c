@@ -9,9 +9,9 @@
 void pop_t(stack_t **head, unsigned int lc)
 {
 	(void)lc;
-	if (stack_size(head) == 0)
+	if (stack_size(*head) == 0)
 	{
-		printf("L%d: can't pop an empty stack\n");
+		printf("L%d: can't pop an empty stack\n", lc);
 		free_stack(head);
 		free(glob.content);
 		fclose(glob.file);
