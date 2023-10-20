@@ -73,6 +73,7 @@ void mod(stack_t **h, unsigned int lc);
 void pstr(stack_t **head, unsigned int lc);
 void pchar(stack_t **h, unsigned int lc);
 void rotl(stack_t **h, unsigned int lc);
+void rotr(stack_t **h, unsigned int lc);
 
 /* queue funcs */
 int popqueue(stack_t **head);

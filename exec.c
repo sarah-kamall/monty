@@ -15,7 +15,7 @@ int exec(char *content, stack_t **stack, unsigned int count, FILE *f)
 			{"nop", nop},			{"sub", sub},				{"div", div_i},
 			{"mul", mul},			{"mod", mod},				{"pchar", pchar},
 			{"pstr", pstr},		{"queue", isqueue}, {"stack", isstack},
-			{"rotl", rotl},		{NULL, NULL}};
+			{"rotl", rotl},		{"rotr", rotr},			{NULL, NULL}};
 	unsigned int i;
 	char *cmand;
 
